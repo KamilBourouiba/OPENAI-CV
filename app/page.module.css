@@ -5,11 +5,14 @@
   align-items: center;
   height: 100vh;
   background-color: white;
+  padding: 20px; /* Added padding for better spacing on mobile */
 }
+
 .title {
   font-size: 1.5em;
   margin-bottom: 20px;
   font-weight: 600;
+  text-align: center; /* Center align title for better presentation */
 }
 
 .container {
@@ -22,6 +25,7 @@
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 .category {
@@ -34,8 +38,8 @@
   text-align: center;
   background-color: #efefef;
   cursor: pointer;
-  max-width: 600px;
-  width: 120px;
+  max-width: 100%; /* Set to 100% for responsiveness */
+  width: 120px; /* Adjust width for larger screens */
   height: 120px;
   padding: 20px;
   transition: background-color 0.3s ease;
@@ -44,4 +48,34 @@
 
 .category:hover {
   background-color: #e3e3eb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.25em; /* Slightly smaller font size for tablets */
+  }
+
+  .category {
+    width: 80%; /* Make categories take more width on smaller screens */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 15px; /* Reduce padding for smaller devices */
+  }
+
+  .container {
+    flex-direction: column; /* Stack categories on smaller screens */
+    align-items: center; /* Center align items */
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.1em; /* Further reduce font size for mobile */
+  }
+
+  .category {
+    width: 90%; /* Increase width for mobile */
+    height: auto; /* Further allow height adjustment */
+    padding: 10px; /* Reduce padding for better fit */
+  }
 }
