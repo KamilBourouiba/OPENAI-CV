@@ -15,22 +15,12 @@ const KamilPage = () => {
       </Head>
       <main className={styles.main}>
         <div className={styles.container}>
-          <div className={styles.fileViewer}>
+          <div className={styles.column}>
             <FileViewer />
           </div>
           <div className={styles.chatContainer}>
             <div className={styles.chat}>
               <Chat />
-            </div>
-            <div className={styles.inputContainer}>
-              <input
-                type="text"
-                placeholder="Enter your question"
-                className={styles.inputField} // Added class for styling
-              />
-              <button className={styles.sendButton}>
-                Send
-              </button>
             </div>
           </div>
         </div>
