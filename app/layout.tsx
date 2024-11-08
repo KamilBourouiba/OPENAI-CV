@@ -6,8 +6,8 @@ import { assistantId } from "./assistant-config";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Assistants API Quickstart",
-  description: "A quickstart template using the Assistants API with OpenAI",
+  title: "Chat 2 CV",
+  description: "Just chat with my CV through a fine tuned ai",
   icons: {
     icon: "/openai.svg",
   },
