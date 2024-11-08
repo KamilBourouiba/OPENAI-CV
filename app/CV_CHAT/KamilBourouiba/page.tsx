@@ -11,7 +11,7 @@ const KamilPage = () => {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <title>Kamil Page</title> {/* Optional: Set a title for your page */}
+        <title>Kamil Page</title>
       </Head>
       <main className={styles.main}>
         <div className={styles.container}>
@@ -21,17 +21,6 @@ const KamilPage = () => {
           <div className={styles.chatContainer}>
             <div className={styles.chat}>
               <Chat />
-            </div>
-            <div className={styles.inputContainer}>
-              {/* Ensure this input area exists as per your original design */}
-              <input
-                type="text"
-                placeholder="Enter your question"
-                className={styles.inputField}
-              />
-              <button className={styles.sendButton}>
-                Send
-              </button>
             </div>
           </div>
         </div>
