@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: row; /* Keep file viewer and chat side by side */
   width: 100%; /* Full width */
-  height: 100%; /* Full height */
+  height: calc(100% - 60px); /* Adjust height to account for logo */
 }
 
 .fileViewer {
@@ -37,8 +37,11 @@
   flex: 1; /* Allow chat to take available space */
   overflow-y: auto; /* Enable vertical scrolling for chat messages */
   padding: 10px; /* Padding for the chat area */
-  max-width: 600px; /* Limit chat width */
+  max-width: 100%; /* Ensure chat takes full width */
   width: 100%; /* Full width */
+  display: flex;
+  flex-direction: column; /* Stack messages vertically */
+  align-items: flex-end; /* Align messages to the right */
 }
 
 .inputContainer {
