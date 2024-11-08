@@ -28,16 +28,18 @@ a {
 }
 
 .warnings {
-  position: absolute;
-  top: 21%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 700px;
-  height: 300px;
-  border-radius: 12px;
+  position: relative; /* Changed from absolute for responsiveness */
+  margin: 20px auto; /* Centering with margin */
+  width: 90%; /* Responsive width */
+  max-width: 700px; /* Limit width for larger screens */
+  height: auto; /* Allow height to adjust */
+  border-radius: var(--border-radius);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px; /* Add padding for mobile devices */
+  background-color: #f9f9f9; /* Optional background for visibility */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
 
 .logo {
@@ -70,4 +72,36 @@ pre {
   white-space: pre-wrap;
   background-color: #e4e4e4;
   color: black;
+}
+
+/* Additional responsive styles */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px; /* Adjust base font size for mobile */
+  }
+
+  .warnings {
+    width: 95%; /* Allow more room on smaller screens */
+    padding: 15px; /* Reduce padding for smaller devices */
+  }
+
+  pre {
+    margin: 0; /* Remove negative margin */
+    padding: 15px; /* Adjust padding */
+  }
+
+  ul,
+  ol {
+    padding-left: 10px; /* Less padding for smaller screens */
+  }
+}
+
+@media (max-width: 400px) {
+  .warnings {
+    padding: 10px; /* Further reduce padding */
+  }
+
+  body {
+    font-size: 12px; /* Make text smaller for very small screens */
+  }
 }
