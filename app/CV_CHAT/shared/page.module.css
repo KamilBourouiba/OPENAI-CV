@@ -46,7 +46,7 @@
   height: 100%; /* Full height */
 }
 
-/* Maintain bubbly input fields styling */
+/* Input field styling */
 .main input,
 .main textarea {
   font-size: 16px; /* Prevent zoom on focus */
@@ -57,10 +57,10 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
   box-sizing: border-box; /* Include padding in width/height */
   width: 100%; /* Responsive width */
+  outline: none; /* Remove default focus outline */
 }
 
-
-/* Button styling for send button */
+/* Button styling */
 .sendButton {
   background-color: black; /* Button background color */
   color: white; /* Button text color */
@@ -100,5 +100,9 @@
   .main textarea {
     padding: 8px; /* Adjust padding for smaller devices */
     font-size: 14px; /* Slightly reduce font size on small screens */
+  }
+
+  .sendButton {
+    padding: 8px 16px; /* Adjust button padding for smaller screens */
   }
 }
