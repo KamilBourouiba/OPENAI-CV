@@ -43,12 +43,11 @@ a {
 }
 
 .logo {
-  width: 64px;
-  height: 64px;
-  position: absolute;
-  margin: 16px;
-  top: 0;
-  right: 0;
+  position: absolute; /* Position it at the top */
+  top: 20px; /* Adjust as necessary */
+  left: 20px; /* Adjust as necessary */
+  width: 100px; /* Set a fixed width for the logo */
+  z-index: 10; /* Make sure it's above other elements */
 }
 
 @media (max-width: 1100px) {

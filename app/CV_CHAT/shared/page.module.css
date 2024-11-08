@@ -7,16 +7,22 @@
   box-sizing: border-box; /* Include padding in height calculation */
 }
 
+.logo {
+  width: 100%; /* Adjust as needed for your design */
+  max-width: 200px; /* Max width to keep it from being too large */
+  margin: 20px auto; /* Center the logo */
+}
+
 .container {
   display: flex;
-  flex-direction: column; /* Stack the FileViewer and Chat vertically */
-  width: 100%;
-  height: 100%;
+  flex-direction: row; /* Keep file viewer and chat side by side */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
 }
 
 .fileViewer {
-  flex: 0 0 auto; /* Prevent the file viewer from growing */
-  margin-bottom: 20px; /* Add spacing below the file viewer */
+  flex: 0 0 300px; /* Fixed width for file viewer */
+  margin-right: 20px; /* Space between file viewer and chat */
 }
 
 .chatContainer {
@@ -35,16 +41,18 @@
   width: 100%; /* Full width */
 }
 
-.inputForm {
+.inputContainer {
   display: flex; /* Align input and button in a row */
   gap: 10px; /* Space between input and button */
-  padding: 10px; /* Add padding to the input form */
+  padding: 10px; /* Add padding to the input container */
   background-color: white; /* White background for the input area */
   border-top: 1px solid #ccc; /* Add a border on top for separation */
 }
 
-.input {
+.main input,
+.main textarea {
   font-size: 16px; /* Prevent zoom on focus */
+  line-height: 1.5; /* Improve readability */
   padding: 10px; /* Internal spacing */
   border: 1px solid #ccc; /* Light gray border */
   border-radius: 16px; /* Maintain rounded appearance */
@@ -54,7 +62,7 @@
   outline: none; /* Remove default focus outline */
 }
 
-.button {
+.sendButton {
   background-color: black; /* Button background color */
   color: white; /* Button text color */
   border: none; /* Remove default button border */
@@ -70,9 +78,9 @@
     flex-direction: column; /* Stack columns on smaller screens */
   }
 
-  .main {
-    height: auto; /* Adjust main height for mobile */
-    padding: 10px; /* Reduce padding on smaller screens */
+  .fileViewer {
+    flex: 0 0 auto; /* Allow file viewer to fit its content */
+    margin: 0; /* No margin on mobile */
   }
 
   .chat {
@@ -82,12 +90,13 @@
 }
 
 @media (max-width: 480px) {
-  .input {
+  .main input,
+  .main textarea {
     padding: 8px; /* Adjust padding for smaller devices */
     font-size: 14px; /* Slightly reduce font size on small screens */
   }
 
-  .button {
+  .sendButton {
     padding: 8px 16px; /* Adjust button padding for smaller screens */
   }
 }
