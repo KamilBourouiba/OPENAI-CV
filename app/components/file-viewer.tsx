@@ -22,11 +22,7 @@ const FileViewer = () => {
   const [files, setFiles] = useState([]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      fetchFiles();
-    }, 1000);
-
-    return () => clearInterval(interval);
+    fetchFiles();
   }, []);
 
   const fetchFiles = async () => {
